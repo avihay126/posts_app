@@ -1,0 +1,38 @@
+
+#post-card{
+    cursor: pointer;
+}
+
+#post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    .post-card-title {
+        color: #007bff;
+    }
+}
+
+
+.post-card-title {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 5%;
+    text-align: start;
+    transition: color 0.3s ease-in-out;
+    border-bottom: 1px solid #ddd; 
+    width: 90%;
+}
+
+
+
+.post-card-body {
+    margin: 10px 5%;
+    line-height: 1.6;
+    text-align: start;
+}
+
+.bi-person-circle {
+    font-size: 2.5rem;
+    color: gray;
+    margin-right: 10px;
+    
+}

@@ -1,0 +1,43 @@
+.post-container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 700px;
+    min-height: 120px;
+    margin: 20px auto;
+    border: 1px solid #2559ea;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    text-align: start;
+    padding: 10px; 
+}
+
+
+#post-title{
+    font-size: clamp(30px, 2.5vw, 35px);
+    padding-bottom: 15px;
+}
+
+#post-body{
+    font-size: clamp(20px, 1.5vw, 25px);
+    padding-bottom: 25px;
+}
+
+
+.comment{  
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgb(240, 239, 239);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(18px, 1vw, 23px);
+}
+
+#comments-title{
+    font-size: 1.7rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
