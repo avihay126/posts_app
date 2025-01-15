@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Post System
 
-## Available Scripts
+A simple React application that allows users to view, filter, create, and interact with posts. Data is fetched from the Placeholder API.
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 1. Clone the repository:
+```
+    git clone https://github.com/avihay126/posts_app.git
+```
+#### 2. Navigate to the project directory:
+```
+  cd posts_app
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 3. Install dependencies:
+ Make sure you have Node.js installed, then run:
+```
+    npm install
+```
 
-### `npm test`
+#### 4. Run the application:
+```
+    npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+####  5. Open the application in your browser: 
+The application will be available at
+```
+    http://localhost:3000
+```
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Displaying Posts:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- All posts are fetched from the Placeholder API and displayed on the main page.  
+- Posts are listed with their title and body.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Search Functionality:**
 
-### `npm run eject`
+- A search bar is available to filter posts by title.  
+- The posts are automatically filtered as the user types in the search bar without the need to press a button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Creating New Posts:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A "Start New Post" button opens a form where the user can input a title and content.  
+- After submitting the form, the new post is added to the list (only for the current session).  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Post Details Page:**
 
-## Learn More
+- Clicking on any post opens a separate page that displays the post's title, content, and a list of comments.  
+- Each comment shows the commenter's name and the content of the comment.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Not Found Page:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- If a user navigates to an invalid URL, the "Not Found" page is displayed with a message and a "Go Home" button to return to the main page.
 
-### Code Splitting
+**Loading Spinner:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- A loading spinner appears whenever an API request is being made, providing a better user experience during data fetching.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Additional Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+**Data Persistence:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The application does not save the posts to a database, as the Placeholder API doesn't support it. Any posts added will be lost after a page refresh.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Error Handling:**
 
-### `npm run build` fails to minify
+- The "Not Found" page also handles errors in case of failed API requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+For example, if you create a post and then try to click on it to get to the "Post Details Page", it will take us to the "Not Found Page", because the post doesn't actually exist in the database.
+## Thechnologies Used
+
+- **React:** The front-end is built using React, including hooks for state and effect management. React Router is used for navigation across the website.
+
+- **Axios:** Used for making HTTP requests to the Placeholder API.
+
+- **CSS:** For styling the components and the layout. **Bootstrap** is used for icons.
