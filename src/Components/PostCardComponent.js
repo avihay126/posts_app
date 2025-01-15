@@ -7,7 +7,7 @@ function PostCardComponent({ post }) {
   const navigate = useNavigate();
 
   return (
-    <div id="post-card" className="post-container" onClick={() => navigate(`/post/${post.id}`)}>
+    <div id="post-card" className="post-container card-box" onClick={() => navigate(`/post/${post.id}`)}>
         <div className="post-card-title">
           <i className="bi bi-person-circle"></i>
           <h2  >{post.title}</h2>

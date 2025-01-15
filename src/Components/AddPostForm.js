@@ -43,7 +43,7 @@ function AddPostForm({ addPost, closeForm, isOpen }) {
   return (
     <div>
       <div className={`overlay ${animationState}`} onClick={(closeForm)}></div>
-      <div className={`add-post-form ${animationState}`}>
+      <div className={`add-post-form ${animationState} card-box`}>
           <div className="close-button" onClick={closeForm}>X</div>
           <form onSubmit={handleSubmit}>
             <input

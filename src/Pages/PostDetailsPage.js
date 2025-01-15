@@ -36,7 +36,7 @@ function PostDetailsPage() {
 
   return (
     <div>
-        <div className="post-container">
+        <div className="post-container card-box">
             <h2 id="post-title" className="post-card-title">{post.title}</h2>
             <p id="post-body" className="post-card-body">{post.body}</p>
             <div className="comments-container">
@@ -47,7 +47,7 @@ function PostDetailsPage() {
                     :
                     <div className="comments-list">
                         {comments?.map(comment => (
-                            <div className="comment" key={comment.id}>
+                            <div className="comment card-box" key={comment.id}>
                                 <h4>
                                     <i className="bi bi-chat-right"></i> {comment.name}
                                 </h4>
